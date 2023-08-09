@@ -79,10 +79,13 @@ export default {
       <timer-bar @timeOut="nextQuestion" />
 
       <div class="flex flex-col gap-2">
-        <span class="text-xs">{{ getCategory.name }}</span>
+        <span class="text-xs text-gray-500">{{ getCategory.name }}</span>
 
         <div>
-          <strong class="text-xl" v-html="currentQuestion.question"></strong>
+          <strong
+            class="text-xl text-white"
+            v-html="currentQuestion.question"
+          ></strong>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-10 text-xs">
             <answer-button
               v-for="(answer, i) in currentQuestion.answers"

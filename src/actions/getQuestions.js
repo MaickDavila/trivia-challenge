@@ -4,7 +4,7 @@ const getQuestions = async () => {
   try {
     const categorySelected = useLocalStorage.getGameConfig().category;
     const difficultySelected = useLocalStorage.getGameConfig().difficulty;
-    const url = `https://opentdb.com/api.php?amount=5&category=${categorySelected}&difficulty=${difficultySelected}&type=multiple`;
+    const url = `https://opentdb.com/api.php?amount=2&category=${categorySelected}&difficulty=${difficultySelected}&type=multiple`;
     const response = await fetch(url);
     const data = await response.json();
     const { results } = data;

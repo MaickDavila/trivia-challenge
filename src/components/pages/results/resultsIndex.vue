@@ -32,12 +32,12 @@ export default {
 </script>
 
 <template>
-  <c-contain>
+  <c-contain class="pt-20 pb-5">
     <div class="w-full flex items-center justify-center">
       <img src="@/assets/trofeo.svg" class="w-40" />
     </div>
 
-    <div class="flex flex-col gap-3">
+    <div class="flex flex-col gap-3 text-white">
       <strong class="text-2xl"
         >{{
           getCorrectAnswers.length === 0
@@ -48,7 +48,7 @@ export default {
       >
       <span
         >Hiciste <b>{{ getCountCorrectAnswers }}</b> puntos en la categoría:
-        <b>{{ getCategory.name }}</b>
+        <b class="text-gray-300">{{ getCategory.name }}</b>
       </span>
     </div>
 
